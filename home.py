@@ -59,6 +59,10 @@ def level_diseace():
             return "Хүнд хэлбэрийн ядралттай"
     
     pd.set_option('future.no_silent_downcasting', True)
+
+    sheets = []
+    dfs = {}
+    
     try:
         file_path = "med_data_export.xlsx"
         wb = load_workbook(filename=file_path, data_only=True)
@@ -79,7 +83,7 @@ def level_diseace():
             dfs[sheet] = df
 
     except Exception as e:
-        print(f"Excel-ээс уншихад алдаа гарлаа:{e}")
+        st.error(f"Excel-ээс уншихад алдаа гарлаа:{e}")
 
     pie_data = {}
 
