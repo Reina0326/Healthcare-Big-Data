@@ -60,7 +60,7 @@ def level_diseace():
     
     pd.set_option('future.no_silent_downcasting', True)
     try:
-        file_path = "D:/Vizualization/shuumj/med_data_export.xlsx"
+        file_path = "med_data_export.xlsx"
         wb = load_workbook(filename=file_path, data_only=True)
     
         sheets = ["isma","isi","chronic_fatigue"]
